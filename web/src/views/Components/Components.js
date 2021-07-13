@@ -34,7 +34,7 @@ export default function Components(props) {
         }}
         {...rest}
       />
-       <Parallax image="https://torange.biz/photo/37/IMAGE/hearts-heart-backgrounds-lights-dark-background-37845.jpg">
+       <Parallax image="https://i.ibb.co/zSjrVWg/Fondo.jpg">
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
