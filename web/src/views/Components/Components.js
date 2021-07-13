@@ -1,4 +1,6 @@
 import React from "react";
+import axios from 'axios';
+
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh
@@ -12,15 +14,19 @@ import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 import Parallax from "../../components/Parallax/Parallax.js";
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 
 import styles from "../../assets/jss/material-kit-react/views/components.js";
+import { Button } from "@material-ui/core";
+import ReactWhatsapp from 'react-whatsapp';
 
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
+
   return (
     <div>
          <Header
@@ -43,8 +49,10 @@ export default function Components(props) {
                 <h3 className={classes.subtitle}>
                   A Badass Material-UI Kit based on Material Design.
                 </h3>
+                <ReactWhatsapp number="573209048264" message="¡Hola! Me interesó sus servicios."><WhatsAppIcon>
+                </WhatsAppIcon></ReactWhatsapp>
               </div>
-            </GridItem>
+            </GridItem>   
           </GridContainer>
         </div>
       </Parallax>
