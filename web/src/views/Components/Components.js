@@ -1,5 +1,5 @@
 import React from "react";
-import axios from 'axios';
+
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -15,10 +15,12 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import Footer from "../../components/Footer/Footer.js";
+import SectionDownload from "../../views/Components/Sections/SectionDownload.js";
 
 
 import styles from "../../assets/jss/material-kit-react/views/components.js";
-import { Button } from "@material-ui/core";
+import Button from "../../components/CustomButtons/Button.js";
 import ReactWhatsapp from 'react-whatsapp';
 
 const useStyles = makeStyles(styles);
@@ -26,6 +28,7 @@ const useStyles = makeStyles(styles);
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
+
 
   return (
     <div>
@@ -49,13 +52,23 @@ export default function Components(props) {
                 <h3 className={classes.subtitle}>
                   A Badass Material-UI Kit based on Material Design.
                 </h3>
-                <ReactWhatsapp number="573209048264" message="¡Hola! Me interesó sus servicios."><WhatsAppIcon>
-                </WhatsAppIcon></ReactWhatsapp>
+                <ReactWhatsapp number="573209048264" message="¡Hola! Me interesó sus servicios.">
+                <Button color="success">
+                 <i className={classes.socials + " fab fa-whatsapp"} />
+             Conctato
+            
+           </Button>
+                </ReactWhatsapp>
+              
               </div>
             </GridItem>   
           </GridContainer>
         </div>
       </Parallax>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+      <SectionDownload />
+      </div>
+      <Footer />
     </div>
     
 
