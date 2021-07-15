@@ -17,6 +17,7 @@ import Parallax from "../../components/Parallax/Parallax.js";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import Footer from "../../components/Footer/Footer.js";
 import SectionDownload from "../../views/Components/Sections/SectionDownload.js";
+import SectionContact from "../../views/Components/Sections/SectionContact.js";
 
 
 import styles from "../../assets/jss/material-kit-react/views/components.js";
@@ -32,7 +33,7 @@ export default function Components(props) {
 
   return (
     <div>
-         <Header
+      <Header
         brand="Crab-Recycling"
         rightLinks={<HeaderLinks />}
         fixed
@@ -43,7 +44,7 @@ export default function Components(props) {
         }}
         {...rest}
       />
-       <Parallax image="https://i.ibb.co/zSjrVWg/Fondo.jpg">
+      <Parallax image="https://i.ibb.co/zSjrVWg/Fondo.jpg">
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
@@ -53,24 +54,25 @@ export default function Components(props) {
                   A Badass Material-UI Kit based on Material Design.
                 </h3>
                 <ReactWhatsapp number="573209048264" message="¡Hola! Me interesó sus servicios.">
-                <Button color="success">
-                 <i className={classes.socials + " fab fa-whatsapp"} />
-             Conctato
-            
-           </Button>
+                  <Button color="success">
+                    <i className={classes.socials + " fab fa-whatsapp"} />
+                    Conctato
+
+                  </Button>
                 </ReactWhatsapp>
-              
+
               </div>
-            </GridItem>   
+            </GridItem>
           </GridContainer>
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
-      <SectionDownload />
+        <SectionContact />
+        <SectionDownload />
       </div>
       <Footer />
     </div>
-    
+
 
   );
 }

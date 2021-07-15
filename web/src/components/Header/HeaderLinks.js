@@ -16,6 +16,9 @@ import { Apps, CloudDownload } from "@material-ui/icons";
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import PhoneIcon from '@material-ui/icons/Phone';
+import MailIcon from '@material-ui/icons/Mail';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 // core components
 import CustomDropdown from "../../components/CustomDropdown/CustomDropdown.js";
 import Button from "../../components/CustomButtons/Button.js";
@@ -29,40 +32,34 @@ export default function HeaderLinks(props) {
   return (
     
     <List className={classes.list}>
+    
       <ListItem className={classes.listItem}>
-       
-        <CustomDropdown
-          noLiPadding
-          buttonText="Components"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent",
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-            
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>,
-          ]}
-        />
-
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
+        <a
          
           color="transparent"
           target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
+          <PhoneIcon className={classes.icons} /> +57 3209048264 
+        </a>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <a
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <MailIcon className={classes.icons} /> crab-recycling@outlook.com 
+        </a>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <a
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <LocationOnIcon className={classes.icons} /> Ubicación
+        </a>
       </ListItem>
       <ListItem className={classes.listItem}>
         {/*<Tooltip title="Delete">
